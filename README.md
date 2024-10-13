@@ -43,7 +43,12 @@ ETC	AWS Git Docker
 
 
 
+## 🎓 Education
 
+**Bachelor of Engineering in Computer Science & Engineering and Electronic Engineering**  
+*Chung-Ang University*  
+March 2019 – August 2025 (Expected Graduation)  
+**GPA**: 4.26/4.5
 
 
 

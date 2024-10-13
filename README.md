@@ -1,6 +1,5 @@
 ## Hi there 👋
 
-<!--
 **SangjunRyu/SangjunRyu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
@@ -9,8 +8,7 @@ Here are some ideas to get you started:
 
   베스핀글로벌 인턴활동 (2024.08.20 ~ 2024.01.30 예정)
 
-
-[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=ysjun5656)](https://solved.ac/ysjun5656/)
+![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=ysjun5656)
 
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
@@ -19,4 +17,4 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
+

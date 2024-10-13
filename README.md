@@ -8,6 +8,18 @@
 - 🔭 I’m currently working on ...
 
   베스핀글로벌 인턴활동 (2024.08.20 ~ 2024.01.30 예정)
+## 📊 Cloud Infrastructure & Data Engineer Training
+
+**Training by**: [Bespin Global MSP](https://www.bespinglobal.com/)  
+**Course Period**: August 26, 2024 – January 24, 2025  
+**Platform**: [Seoul SeSAC](https://sesac.seoul.kr/course/active/detail.do)
+
+### Progress
+
+| Start Date | End Date | Current Progress |
+|------------|----------|------------------|
+| 24/08/26   | 25/01/24 | ![Progress](https://progress-bar.dev/0/?width=250) |
+  
 
 Role	Company	Period
 ML/DL Engineer	SK Telecom	2024.01. ~

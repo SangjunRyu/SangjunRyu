@@ -1,97 +1,111 @@
-# Sangjun You(유상준)
+# Sangjun You (유상준)
 
 ![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=ysjun5656)
 
+---
 
-💻 Work Experience
+## 💻 Work Experience
 
-## 📊 Cloud Infrastructure & Data Engineer Training
+### 📊 Cloud Infrastructure & Data Engineer Training
 
 **Training by**: [Bespin Global MSP](https://www.bespinglobal.com/)  
 **Course Period**: August 26, 2024 – January 24, 2025  
 **Platform**: [Seoul SeSAC](https://sesac.seoul.kr/course/active/detail.do)
 
-### 🟢 Completed Modules:
+---
+
+#### 🟢 Completed Modules:
 
 - **Linux & System Basics**:  
-  - Introduction to Linux commands, file systems, and shell scripting.
-  - Installation and management of servers in a Linux environment.
+  - Linux commands, file systems, and shell scripting basics.
+  - Server installation and management in Linux environments.
 
 - **Database & Data Analysis**:  
-  - Fundamental relational database concepts, SQL queries.
-  - Basics of data analysis, using tools for querying and managing databases.
+  - Introduction to relational databases, SQL queries.
+  - Basics of data analysis with tools for querying and managing databases.
 
 - **Cloud Computing Fundamentals**:  
-  - Overview of cloud computing, benefits, and key services.
+  - Overview of cloud computing and its benefits.
   - **AWS EC2 Instances**: Creation, management, and scaling of virtual instances.
   - **Elastic Beanstalk**: Deployment of web applications.
-  - **Lambda & Serverless Functions**: Understanding event-driven architectures.
+  - **Lambda & Serverless Functions**: Event-driven architecture with serverless computing.
   - **IAM (Identity & Access Management)**: Managing permissions and security policies.
 
 ---
 
-### 🔵 Upcoming Modules:
+#### 🔵 Upcoming Modules:
 
 - **Network & VPC (Virtual Private Cloud)**:  
-  - Configuring secure, scalable, and isolated cloud networks.
-  - Creating and managing subnets, routing tables, and security groups.
+  - Configuring secure, scalable, isolated cloud networks.
+  - Managing subnets, routing tables, and security groups.
 
 - **Database Management**:  
-  - Exploring managed databases (e.g., RDS, DynamoDB).
-  - Techniques for scaling databases in a cloud environment.
+  - Exploring managed databases like RDS and DynamoDB.
+  - Scaling database solutions in cloud environments.
 
 - **Cloud Architecture Design**:  
-  - Designing fault-tolerant, high-availability cloud architectures.
-  - Implementing multi-region setups and disaster recovery strategies.
+  - Designing fault-tolerant, high-availability architectures.
+  - Multi-region setups and disaster recovery strategies.
 
 - **Cloud Infrastructure Project** *(Scheduled for November)*:  
-  - A month-long project focused on building end-to-end cloud infrastructures using AWS services.  
-  - Topics: automation, monitoring, scalability, and resilience.
+  - Building end-to-end cloud infrastructures using AWS.
+  - Topics: automation, monitoring, scalability, resilience.
 
 - **Big Data Services & Pipelines**:  
-  - Learning to implement data pipelines on the cloud.
-  - **Data Visualization**: Using AWS QuickSight or other BI tools for visualization.
-  - **Data Storage & Management**: Optimizing storage solutions for big data workloads.
+  - Implementing data pipelines on cloud environments.
+  - **Data Visualization**: AWS QuickSight and other BI tools.
+  - **Data Storage & Management**: Optimizing big data storage solutions.
 
 - **Data Engineer Service Project** *(Scheduled for December-January)*:  
-  - Building a complete data engineering pipeline from data ingestion to processing and visualization.
-  - Focus on large-scale data, real-time processing, and integration with cloud-native services.
+  - Building data engineering pipelines from ingestion to processing and visualization.
+  - Focus on real-time data processing and cloud-native integration.
 
 ---
 
+## 💪 Skills
 
-# 💪 Skills
-
-| **Category**          | **Skills**                                                                                                                                                                                                                                                                                                    |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Favorite Language**  | ![Python](https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white)                                                                                                                                                                                                  |
-| **ML & Deep Learning** | <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white"> <img src="https://img.shields.io/badge/opencv-5C3EE8?style=for-the-badge&logo=opencv&logoColor=black"> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=TensorFlow&logoColor=white"> |
-| **Experienced Language** | <img src="https://img.shields.io/badge/unity-FFFFFF?style=for-the-badge&logo=unity&logoColor=white"> <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"> |
+| **Category**          | **Skills**                                                                                                                                                                                                                  |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Favorite Language**  | ![Python](https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white)                                                                                                                 |
+| **ML & Deep Learning** | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-5C3EE8?style=for-the-badge&logo=opencv&logoColor=black) ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=TensorFlow&logoColor=white) |
+| **Experienced Language** | ![Unity](https://img.shields.io/badge/unity-FFFFFF?style=for-the-badge&logo=unity&logoColor=white) ![Linux](https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Git](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white)   |
 | **Other Tools**        | ![HTML5](https://img.shields.io/badge/HTML5-E34F26.svg?&style=for-the-badge&logo=HTML5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1.svg?&style=for-the-badge&logo=MySQL&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=white) |
 
-
+---
 
 ## 🎓 Education
 
-**Bachelor of Engineering in Computer Science & Engineering and Electronic Engineering**  
+**Bachelor of Engineering in Computer Science & Electronic Engineering**  
 *Chung-Ang University*  
 March 2019 – August 2025 (Expected Graduation)  
 **GPA**: 4.26/4.5
 
+---
 
-어학 실력
-TOEFL 89점 (2023년 6월 4일 취득)
-교환학생 2023.12.29 ~ 2024.06.30 (Finland, University of Turku)
+## 🌍 Language Proficiency
 
-기타 교내활동
-CUAI 중앙대학교 인공지능 학회 (2022년 3월 ~ 2022년 12월)
-중앙대학교 생성적 인공지능 연구실(2023년 1월 ~ 2023년 8월)
+- **TOEFL**: 89 (June 4, 2023)
+- **Exchange Program**: University of Turku, Finland (Dec 29, 2023 – June 30, 2024)
 
-🚂 Toy Project
+---
 
-2024 3월 ~ 6월 Fates Gambit a greedy haste 유니티 게임 프로젝트 (University of Turku) 
+## 🎓 Extracurricular Activities
 
-2023 7월 ~ 10월 20일 Eyetracking IOT 시선추적 프로젝트
+- **CUAI** (Chung-Ang University Artificial Intelligence Club): March 2022 – December 2022
+- **Generative AI Research Lab**: January 2023 – August 2023
+
+---
+
+## 🚂 Toy Projects
+
+- **Fates Gambit (Unity Game Project)**: March 2024 – June 2024  
+  *University of Turku*  
+  Developed a 2D action game using Unity with a focus on game mechanics and design. Collaborated in a team to create game assets, implement gameplay logic, and refine user experience.
 
 
+- **Eyetracking IoT Project**: July 2023 – October 20, 2023  
+  Developed an IoT-based eye-tracking system using Raspberry Pi and OpenCV for real-time data collection and analysis. Focused on integrating hardware and software to track and visualize gaze data for research and practical applications.
 
+
+- **Red Horsewagon (Unity Horror Mini-Game)**: July 2023 – August 2023  
+  Developed a 2D horror-themed mini-game using Unity. Focused on creating an immersive atmosphere with eerie visuals, sound design, and game mechanics to enhance the player's suspense and fear. Managed the entire development process from concept to final delivery.

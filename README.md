@@ -18,7 +18,7 @@
 
 | Start Date | End Date | Current Progress |
 |------------|----------|------------------|
-| 24/08/26   | 25/01/24 | ![Progress](https://progress-bar.dev/0/?width=250) |
+| 24/08/26   | 25/01/24 | ![Progress Bar](https://progress-bar.dev/0) |
   
 
 Role	Company	Period

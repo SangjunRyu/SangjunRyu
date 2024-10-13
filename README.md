@@ -62,6 +62,7 @@
 
 ---
 
+
 ## 🇰🇷 Military Service
 
 **Republic of Korea Army - Information Technology Specialist (전산병)**  
@@ -81,9 +82,6 @@
   - Conducted PC formatting and set up new computers, ensuring optimal performance and security.
   - Created RJ45 Ethernet cables for network connectivity, enhancing infrastructure reliability.
   - Installed and configured printers, providing essential printing services for administrative tasks.
-
-This experience honed my skills in IT infrastructure management, network security, and technical troubleshooting, reinforcing my capabilities in cloud infrastructure and development.
-
 
 
 

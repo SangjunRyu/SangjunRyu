@@ -1,47 +1,63 @@
-## Hi there 👋
+# Sangjun You(유상준)
 
-<!--**SangjunRyu/SangjunRyu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. -->
+![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=ysjun5656)
 
 
 💻 Work Experience
 
-- 🔭 I’m currently working on ...
-
-  베스핀글로벌 인턴활동 (2024.08.20 ~ 2024.01.30 예정)
 ## 📊 Cloud Infrastructure & Data Engineer Training
 
 **Training by**: [Bespin Global MSP](https://www.bespinglobal.com/)  
 **Course Period**: August 26, 2024 – January 24, 2025  
 **Platform**: [Seoul SeSAC](https://sesac.seoul.kr/course/active/detail.do)
 
-### Progress
+### 🟢 Completed Modules:
 
-| Start Date | End Date | Current Progress |
-|------------|----------|------------------|
-| 24/08/26   | 25/01/24 | ![Progress Bar](https://progress-bar.dev/0) |
-  
+- **Linux & System Basics**:  
+  - Introduction to Linux commands, file systems, and shell scripting.
+  - Installation and management of servers in a Linux environment.
 
-Role	Company	Period
-ML/DL Engineer	SK Telecom	2024.01. ~
-Deep Learning Researcher (Intern)	Neurocle	2023.01. ~ 2023.08.
+- **Database & Data Analysis**:  
+  - Fundamental relational database concepts, SQL queries.
+  - Basics of data analysis, using tools for querying and managing databases.
 
+- **Cloud Computing Fundamentals**:  
+  - Overview of cloud computing, benefits, and key services.
+  - **AWS EC2 Instances**: Creation, management, and scaling of virtual instances.
+  - **Elastic Beanstalk**: Deployment of web applications.
+  - **Lambda & Serverless Functions**: Understanding event-driven architectures.
+  - **IAM (Identity & Access Management)**: Managing permissions and security policies.
 
-🔬 Research Experience
-Role	Company	Period
-Undergraduate Researcher	Computer Vision Machine Learning Lab.
-(Advisor. Prof. Junseok Kwon)	2019.08. ~ 2020.08.
+---
 
+### 🔵 Upcoming Modules:
 
+- **Network & VPC (Virtual Private Cloud)**:  
+  - Configuring secure, scalable, and isolated cloud networks.
+  - Creating and managing subnets, routing tables, and security groups.
 
-![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=ysjun5656)
+- **Database Management**:  
+  - Exploring managed databases (e.g., RDS, DynamoDB).
+  - Techniques for scaling databases in a cloud environment.
 
+- **Cloud Architecture Design**:  
+  - Designing fault-tolerant, high-availability cloud architectures.
+  - Implementing multi-region setups and disaster recovery strategies.
 
-🛠️ Tech Skill
-Classification	Skills
-Machine Learning	PyTorch Tensorflow Keras
-Language - Favorite	Python
-Language - Useable	C++
-ETC	AWS Git Docker
+- **Cloud Infrastructure Project** *(Scheduled for November)*:  
+  - A month-long project focused on building end-to-end cloud infrastructures using AWS services.  
+  - Topics: automation, monitoring, scalability, and resilience.
+
+- **Big Data Services & Pipelines**:  
+  - Learning to implement data pipelines on the cloud.
+  - **Data Visualization**: Using AWS QuickSight or other BI tools for visualization.
+  - **Data Storage & Management**: Optimizing storage solutions for big data workloads.
+
+- **Data Engineer Service Project** *(Scheduled for December-January)*:  
+  - Building a complete data engineering pipeline from data ingestion to processing and visualization.
+  - Focus on large-scale data, real-time processing, and integration with cloud-native services.
+
+---
 
 
 # 💪 Skills
@@ -63,14 +79,19 @@ March 2019 – August 2025 (Expected Graduation)
 **GPA**: 4.26/4.5
 
 
+어학 실력
+TOEFL 89점 (2023년 6월 4일 취득)
+교환학생 2023.12.29 ~ 2024.06.30 (Finland, University of Turku)
+
+기타 교내활동
+CUAI 중앙대학교 인공지능 학회 (2022년 3월 ~ 2022년 12월)
+중앙대학교 생성적 인공지능 연구실(2023년 1월 ~ 2023년 8월)
+
+🚂 Toy Project
+
+2024 3월 ~ 6월 Fates Gambit a greedy haste 유니티 게임 프로젝트 (University of Turku) 
+
+2023 7월 ~ 10월 20일 Eyetracking IOT 시선추적 프로젝트
 
 
-
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
 

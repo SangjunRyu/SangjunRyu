@@ -62,6 +62,31 @@
 
 ---
 
+## 🇰🇷 Military Service
+
+**Republic of Korea Army - Information Technology Specialist (전산병)**  
+*April 2021 – October 2022*
+
+- **Managed the Division's Website**:  
+  - Maintained and updated the HTML content of the division's official website, ensuring timely information dissemination regarding unit schedules and changes.
+
+- **Managed Video Conferencing Infrastructure**:  
+  - Oversaw the setup and maintenance of the division's video conferencing system, facilitating seamless communication for remote meetings.
+
+- **Network Management**:  
+  - Configured firewalls and monitored network traffic to ensure secure and efficient communication within the division.
+  - Performed routine network surveillance to identify and address potential issues proactively.
+
+- **Technical Support**:  
+  - Conducted PC formatting and set up new computers, ensuring optimal performance and security.
+  - Created RJ45 Ethernet cables for network connectivity, enhancing infrastructure reliability.
+  - Installed and configured printers, providing essential printing services for administrative tasks.
+
+This experience honed my skills in IT infrastructure management, network security, and technical troubleshooting, reinforcing my capabilities in cloud infrastructure and development.
+
+
+
+
 ## 💪 Skills
 
 | **Category**          | **Skills**                                                                                                                                                                                                                  |

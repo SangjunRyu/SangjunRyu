@@ -1,5 +1,9 @@
 # Sangjun You (유상준)
 
+![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=ysjun5656)
+
+---
+
 <details>
   <summary>국문버전</summary>
   
@@ -131,9 +135,6 @@
 </details>
 
 
-![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=ysjun5656)
-
----
 
 ## 💻 Work Experience
 

@@ -125,6 +125,8 @@ March 2019 – August 2025 (Expected Graduation)
   *University of Turku*  
   Developed a 2D action game using Unity with a focus on game mechanics and design. Collaborated in a team to create game assets, implement gameplay logic, and refine user experience.
 
+- DB 수업 프로젝트, 공항 DB 구축 및 웹브라우저 동작. 11월 ~ 12월까지
+
 
 - **Eyetracking IoT Project**: July 2023 – October 20, 2023  
   Developed an IoT-based eye-tracking system using Raspberry Pi and OpenCV for real-time data collection and analysis. Focused on integrating hardware and software to track and visualize gaze data for research and practical applications.

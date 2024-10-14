@@ -1,5 +1,11 @@
 # Sangjun You (유상준)
 
+<details>
+  <summary>국문버전</summary>
+  ... 
+</details>
+
+
 ![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=ysjun5656)
 
 ---
@@ -134,3 +140,6 @@ March 2019 – August 2025 (Expected Graduation)
 
 - **Red Horsewagon (Unity Horror Mini-Game)**: July 2023 – August 2023  
   Developed a 2D horror-themed mini-game using Unity. Focused on creating an immersive atmosphere with eerie visuals, sound design, and game mechanics to enhance the player's suspense and fear. Managed the entire development process from concept to final delivery.
+
+
+

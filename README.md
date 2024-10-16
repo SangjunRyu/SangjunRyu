@@ -12,7 +12,7 @@
 ### 📊 클라우드 인프라 및 데이터 엔지니어 교육
 **교육기관**: [베스핀글로벌 MSP](https://www.bespinglobal.com/)  
 **교육 기간**: 2024년 8월 26일 – 2025년 1월 24일 수료예정
-**플랫폼**: [서울 세싹](https://sesac.seoul.kr/course/active/detail.do)
+**플랫폼**: [서울 새싹캠퍼스](https://sesac.seoul.kr/course/active/detail.do)
 
 #### 🟢 Completed Modules:
 
@@ -32,13 +32,30 @@
   - **Lambda & Serverless Functions**: 이벤트 기반 서버리스 컴퓨팅 아키텍처.
   - **IAM (Identity & Access Management)**: 권한 및 보안 정책 관리.
 
+- **네트워크 기초 이론**:  
+  - **OSI 7 계층 모델**: 각 계층의 기능과 역할.
+  - **IP 주소와 네트워크 장비**: 라우터, 스위치 등 핵심 네트워크 장비.
+  - **TCP/IP 핵심 프로토콜**: TCP, UDP, IP, ICMP 등 주요 프로토콜.
+  - **Wireshark 패킷 분석**: 네트워크 패킷 캡처 및 분석 방법.
+
+- **Network & VPC (Virtual Private Cloud)**:  
+  - 안전하고 확장 가능한 클라우드 네트워크 구성.
+  - 서브넷, 라우팅 테이블, 네트워크 ACL 및 보안 그룹 관리.
+
+---
+
+**Advanced Cloud Networking & Deployment**  
+- **Route 53 & Multi-Region Deployment**:  
+  - 도메인 네임 시스템(DNS) 관리 및 여러 리전 간 배포 설정.
+  - **Failover 구성**: 고가용성을 위한 장애 조치(Failover) 설정.
+  
+- **CloudFront & CDN (Content Delivery Network)**:  
+  - CloudFront를 통한 CDN 구성 및 글로벌 콘텐츠 배포 이해.
+
 ---
 
 #### 🔵 Upcoming Modules:
 
-- **Network & VPC (Virtual Private Cloud)**:  
-  - 안전하고 확장 가능한 클라우드 네트워크 구성.
-  - 서브넷, 라우팅 테이블, 보안 그룹 관리.
 
 - **Database Management**:  
   - RDS 및 DynamoDB와 같은 관리형 데이터베이스 탐구.
@@ -124,7 +141,9 @@
   Unity를 사용하여 2D 액션 게임 개발. 게임 메커니즘 및 디자인에 중점을 두었으며, 팀과 협력하여 게임 에셋 생성, 게임플레이 로직 구현, 사용자 경험 개선 작업을 수행.
 
 
-- DB 수업 프로젝트, 공항 DB 구축 및 웹브라우저 동작. 11월 ~ 12월까지
+- **DB 수업 프로젝트, 공항 DB 구축 및 웹브라우저 동작** 2024년 11월 ~ 2024년 12월
+- flight, reservation, payment, service, plane 데이터로 나누어 DB 설계 및 정규화 진행. MySQL 사용하여 함수, 프로시저, 트리거 생성.
+- React로 front, fastapi와 mysql db로 백엔드를 구축하여 회원가입, 로그인, 좌석조회기능을 구현하였음. 
 
 
 - **Eyetracking IoT Project**: 2023년 7월 – 2023년 10월 20일 
@@ -164,13 +183,27 @@
   - **Lambda & Serverless Functions**: Event-driven architecture with serverless computing.
   - **IAM (Identity & Access Management)**: Managing permissions and security policies.
 
+- **Basic Networking Concepts**:  
+  - **OSI 7-Layer Model**: Understanding the function and roles of each layer.
+  - **IP Addressing & Networking Devices**: Core networking equipment such as routers and switches.
+  - **Core TCP/IP Protocols**: Key protocols including TCP, UDP, IP, and ICMP.
+  - **Wireshark Packet Analysis**: Capturing and analyzing network packets.
+
+- **Network & VPC (Virtual Private Cloud)**:  
+  - Building secure and scalable cloud networks.
+  - Managing subnets, routing tables, network ACLs, and security groups.
+
+**Advanced Cloud Networking & Deployment**  
+- **Route 53 & Multi-Region Deployment**:  
+  - Managing Domain Name System (DNS) using Route 53 and configuring multi-region deployments.
+  - **Failover Configuration**: Setting up failover for high availability.
+
+- **CloudFront & CDN (Content Delivery Network)**:  
+  - Configuring CDN with CloudFront for global content distribution and understanding CDN mechanics.
+
 ---
 
 #### 🔵 Upcoming Modules:
-
-- **Network & VPC (Virtual Private Cloud)**:  
-  - Configuring secure, scalable, isolated cloud networks.
-  - Managing subnets, routing tables, and security groups.
 
 - **Database Management**:  
   - Exploring managed databases like RDS and DynamoDB.
@@ -258,7 +291,8 @@ March 2019 – August 2025 (Expected Graduation)
   *University of Turku*  
   Developed a 2D action game using Unity with a focus on game mechanics and design. Collaborated in a team to create game assets, implement gameplay logic, and refine user experience.
 
-- DB 수업 프로젝트, 공항 DB 구축 및 웹브라우저 동작. 11월 ~ 12월까지
+- **Airport Database Management System**: November 2024 – December 2024  
+  Designed and normalized a database system to manage flights, reservations, payments, services, and planes. Created backend functionality using **FastAPI** and **MySQL**, while developing the frontend with **React**. Implemented key features such as user registration, login, and seat availability lookup. Additionally, used **MySQL** to create functions, procedures, and triggers for efficient data handling.
 
 
 - **Eyetracking IoT Project**: July 2023 – October 20, 2023  

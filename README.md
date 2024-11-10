@@ -16,6 +16,13 @@
 
 #### 🟢 Completed Modules:
 
+- **Cloud Architecture Design**:  
+  - 장애에 강하고 고가용성 아키텍처 설계.
+  - 다중 리전 설정 및 재해 복구 전략.
+  - https://github.com/SangjunRyu/AWS-HA-architecture-practice
+  
+---
+
 - **Linux & System Basics**:  
     - 리눅스 명령어, 파일 시스템, 쉘 스크립트 기본.
     - 리눅스 환경에서 서버 설치 및 관리.
@@ -55,10 +62,6 @@
 - **Database Management**:  
   - RDS 및 DynamoDB와 같은 관리형 데이터베이스 탐구.
   - 클라우드 환경에서 데이터베이스 솔루션 확장.
-
-- **Cloud Architecture Design**:  
-  - 장애에 강하고 고가용성 아키텍처 설계.
-  - 다중 리전 설정 및 재해 복구 전략.
 
 ---
 
@@ -168,6 +171,13 @@
 
 #### 🟢 Completed Modules:
 
+- **Cloud Architecture Design**:  
+  - Designing fault-tolerant, high-availability architectures.
+  - Multi-region setups and disaster recovery strategies.
+  - https://github.com/SangjunRyu/AWS-HA-architecture-practice
+ 
+---
+
 - **Linux & System Basics**:  
   - Linux commands, file systems, and shell scripting basics.
   - Server installation and management in Linux environments.
@@ -204,10 +214,6 @@
 - **Database Management**:  
   - Exploring managed databases like RDS and DynamoDB.
   - Scaling database solutions in cloud environments.
-
-- **Cloud Architecture Design**:  
-  - Designing fault-tolerant, high-availability architectures.
-  - Multi-region setups and disaster recovery strategies.
 
 ---
 

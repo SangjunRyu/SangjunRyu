@@ -41,7 +41,10 @@ Explore this project in detail:
 **Course Period**: August 26, 2024 – January 24, 2025  
 **Platform**: [Seoul SeSAC](https://sesac.seoul.kr/course/active/detail.do)
 
-#### 🟢 Completed Modules:
+
+<details>
+  <summary>🟢 Completed Modules</summary>
+
 - **Cloud Architecture Design**:
   - Designing fault-tolerant, high-availability architectures.
   - Multi-region setups and disaster recovery strategies.
@@ -65,8 +68,11 @@ Explore this project in detail:
 - **Network & VPC (Virtual Private Cloud)**:
   - Building secure and scalable cloud networks.
   - Managing subnets, routing tables, network ACLs, and security groups.
+</details>
 
-#### 🔵 Upcoming Modules:
+<details>
+  <summary>🔵 Upcoming Modules</summary>
+
 - **Big Data Services & Pipelines** *(Scheduled for December-January)*:
   - Implementing data pipelines on cloud environments.
   - **Data Visualization**: AWS QuickSight and other BI tools.
@@ -75,8 +81,7 @@ Explore this project in detail:
 - **Data Engineer Service Project**:
   - Building data engineering pipelines from ingestion to processing and visualization.
   - Focus on real-time data processing and cloud-native integration.
-
----
+</details>
 
 ## 🎓 Education
 

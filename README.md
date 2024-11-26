@@ -83,10 +83,12 @@ Explore this project in detail:
   - Focus on real-time data processing and cloud-native integration.
 </details>
 
+---
+
 ## 🎓 Education
 
 **Bachelor of Engineering in Computer Science & Electronic Engineering**  
-*Chung-Ang University, Seoul, Korea*  
+[*Chung-Ang University, Seoul, Korea*](https://www.cau.ac.kr)
 March 2019 – August 2025 (Expected Graduation)  
 **GPA**: 4.26/4.5
 

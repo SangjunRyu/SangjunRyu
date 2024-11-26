@@ -97,6 +97,9 @@ March 2019 – August 2025 (Expected Graduation)
 **Republic of Korea Army - Information Technology Specialist**  
 *April 2020 – October 2021*
 
+<details>
+  <summary>Key Responsibilities & Achievements</summary>
+
 - **Managed the Division's Website**:  
   - Maintained and updated the HTML content of the division's official website, ensuring timely information dissemination regarding unit schedules and changes.
 
@@ -111,6 +114,8 @@ March 2019 – August 2025 (Expected Graduation)
   - Conducted PC formatting and set up new computers, ensuring optimal performance and security.
   - Created RJ45 Ethernet cables for network connectivity, enhancing infrastructure reliability.
   - Installed and configured printers, providing essential printing services for administrative tasks.
+
+</details>
 
 ---
 

@@ -62,15 +62,13 @@
 - **Database Management**:  
   - RDS 및 DynamoDB와 같은 관리형 데이터베이스 탐구.
   - 클라우드 환경에서 데이터베이스 솔루션 확장.
-
+    
+- **Cloud Infrastructure Project** :  
+  - AWS를 사용하여 엔드투엔드 클라우드 인프라 구축.
+  - Topics: automation, monitoring, scalability, resilience.
 ---
 
 #### 🔵 Upcoming Modules:
-
-
-- **Cloud Infrastructure Project** *(11월 진행예정)*:  
-  - AWS를 사용하여 엔드투엔드 클라우드 인프라 구축.
-  - Topics: automation, monitoring, scalability, resilience.
 
 - **Big Data Services & Pipelines**:  
   - 클라우드 환경에서 데이터 파이프라인 구현.
@@ -215,14 +213,13 @@
   - Exploring managed databases like RDS and DynamoDB.
   - Scaling database solutions in cloud environments.
 
+- **Cloud Infrastructure Project** *(Scheduled for November)*:  
+  - Building end-to-end cloud infrastructures using AWS.
+  - Topics: automation, monitoring, scalability, resilience.
 ---
 
 #### 🔵 Upcoming Modules:
 
-
-- **Cloud Infrastructure Project** *(Scheduled for November)*:  
-  - Building end-to-end cloud infrastructures using AWS.
-  - Topics: automation, monitoring, scalability, resilience.
 
 - **Big Data Services & Pipelines**:  
   - Implementing data pipelines on cloud environments.

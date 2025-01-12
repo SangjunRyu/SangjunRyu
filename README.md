@@ -68,15 +68,17 @@ Explore this project in detail:
 - **Network & VPC (Virtual Private Cloud)**:
   - Building secure and scalable cloud networks.
   - Managing subnets, routing tables, network ACLs, and security groups.
-</details>
-
-<details>
-  <summary>🔵 Upcoming Modules</summary>
 
 - **Big Data Services & Pipelines** *(Scheduled for December-January)*:
   - Implementing data pipelines on cloud environments.
   - **Data Visualization**: AWS QuickSight and other BI tools.
   - **Data Storage & Management**: Optimizing big data storage solutions.
+
+</details>
+
+<details>
+  <summary>🔵 Upcoming Modules</summary>
+
 
 - **Data Engineer Service Project**:
   - Building data engineering pipelines from ingestion to processing and visualization.

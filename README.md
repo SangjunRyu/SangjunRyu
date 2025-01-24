@@ -5,6 +5,43 @@
 
 ---
 
+## 🚀 Data Engineering Projects
+
+### **Real-Time Population-Based Restaurant Recommendation Service**
+- **Objective**: Developed a real-time restaurant recommendation service integrating population flow data with commercial district insights to provide tailored suggestions.
+- **Core Features**:
+  - Real-time data ingestion every 10 minutes from public APIs.
+  - Batch analysis of historical data using AWS Glue for deeper insights.
+  - Visualization of population trends and commercial activity using **AWS QuickSight** and Pandas.
+  - Lightweight machine learning models implemented on **NVIDIA GeForce RTX 3070** for efficient predictions.
+- **Tools & Technologies**:
+  - **AWS Services**: Glue, SageMaker, S3, and Lambda.
+  - **Data Processing**: Pandas, NumPy, Matplotlib.
+  - **Real-Time Integration**: API calls for population and location data.
+- **Outcome**:
+  - Improved recommendation accuracy by dynamically adapting to real-time changes.
+  - Delivered insights for restaurant owners and users in key Seoul districts.
+
+---
+
+### **Fire Emergency Response Dashboard**
+- **Objective**: Built a data-driven dashboard to analyze and visualize fire department response times and optimize resource allocation for improved golden time adherence (7 minutes).
+- **Core Features**:
+  - Batch pipeline for ETL of historical fire department data.
+  - Real-time data ingestion for traffic and accident monitoring using AWS Lambda.
+  - Integrated AWS SNS for real-time notifications on critical incidents.
+- **Technologies Used**:
+  - **ETL Pipeline**: AWS Glue, S3 (Parquet storage), Pandas.
+  - **Real-Time Processing**: AWS Lambda, Apache Flink.
+  - **Visualization**: AWS QuickSight, Grafana.
+- **Achievements**:
+  - Identified regions exceeding response times and suggested resource reallocation.
+  - Enabled real-time monitoring of emergency traffic conditions to enhance response times.
+
+---
+
+
+
 ## 🎯 Key Project: AWS 3-Tier Architecture
 
 A comprehensive **3-Tier web service architecture** project built with AWS. This project integrates:

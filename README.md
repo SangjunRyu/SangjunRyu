@@ -5,7 +5,7 @@
 
 ---
 
-## 🚀 Data Engineering Projects
+## 🎯 Key Project: 🚀 Data Engineering Projects
 
 ### **Real-Time Population-Based Restaurant Recommendation Service**
 - **Objective**: Developed a real-time restaurant recommendation service integrating population flow data with commercial district insights to provide tailored suggestions.
@@ -39,8 +39,6 @@
   - Enabled real-time monitoring of emergency traffic conditions to enhance response times.
 
 ---
-
-
 
 ## 🎯 Key Project: AWS 3-Tier Architecture
 

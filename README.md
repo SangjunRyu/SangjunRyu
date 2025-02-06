@@ -38,6 +38,10 @@
   - Identified regions exceeding response times and suggested resource reallocation.
   - Enabled real-time monitoring of emergency traffic conditions to enhance response times.
 
+### Repository:
+Explore this project in detail:
+[Fire Emergency golden time project](https://github.com/SangjunRyu/Cloud9-Final-Project)
+
 ---
 
 ## 🎯 Key Project: AWS 3-Tier Architecture

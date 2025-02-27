@@ -4,6 +4,7 @@
 
 Currently working as an **IT Engineer** in the **IT Operations Team** at **Mirae Asset Life Insurance**. My responsibilities include **data architecture, BI (Business Intelligence), and IT operations** to enhance business decision-making. 
 
+LinkedIn: https://www.linkedin.com/in/%EC%83%81%EC%A4%80-%EC%9C%A0-a29442257/ 
 ---
 
 ## 💻 Work Experience
@@ -15,9 +16,6 @@ Currently working as an **IT Engineer** in the **IT Operations Team** at **Mirae
   - Implementing efficient **data pipelines** for business operations.
   - Providing real-time **BI dashboards and reports** for C-level executives.
   - Optimizing database structures and ensuring **data integrity**.
-
----
-
 
 ---
 

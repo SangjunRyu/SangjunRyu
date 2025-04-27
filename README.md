@@ -46,23 +46,6 @@ LinkedIn: https://www.linkedin.com/in/%EC%83%81%EC%A4%80-%EC%9C%A0-a29442257/
 
 ## 🎯 Key Projects: 🚀 Data Engineering & Cloud Infrastructure
 
-### **Real-Time Population-Based Restaurant Recommendation Service**
-- **Objective**: Developed a real-time restaurant recommendation service integrating population flow data with commercial district insights to provide tailored suggestions.
-- **Core Features**:
-  - Real-time data ingestion every 10 minutes from public APIs.
-  - Batch analysis of historical data using AWS Glue for deeper insights.
-  - Visualization of population trends and commercial activity using **AWS QuickSight** and Pandas.
-  - Lightweight machine learning models implemented on **NVIDIA GeForce RTX 3070** for efficient predictions.
-- **Tools & Technologies**:
-  - **AWS Services**: Glue, SageMaker, S3, and Lambda.
-  - **Data Processing**: Pandas, NumPy, Matplotlib.
-  - **Real-Time Integration**: API calls for population and location data.
-- **Outcome**:
-  - Improved recommendation accuracy by dynamically adapting to real-time changes.
-  - Delivered insights for restaurant owners and users in key Seoul districts.
-
----
-
 ### **Fire Emergency Response Dashboard**
 - **Objective**: Built a data-driven dashboard to analyze and visualize fire department response times and optimize resource allocation for improved golden time adherence (7 minutes).
 - **Core Features**:

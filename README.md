@@ -82,22 +82,6 @@ Apache Airflow (Pipeline Automation & Scheduling)
 
 ---
 
-## Core Design Principles
-
-- Separation of **Batch and Speed layers** (Lambda Architecture)
-- Immutable raw data for reliability and replayability
-- Idempotent batch processing
-- Real-time + historical analytics coexistence
-- End-to-end ownership from ingestion to serving layer
-
----
-
-## Tech Stack
-
-Kafka • Spark • Airflow • PostgreSQL • AWS S3 • Superset • Docker
-
----
-
 # ☁ Cloud Infrastructure Project: AWS 3-Tier Architecture
 
 Repository:  

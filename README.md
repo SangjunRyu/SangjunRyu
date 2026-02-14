@@ -1,138 +1,183 @@
 # Sangjun You
 
-## Mirae Asset Life Insurance - IT Operations & Data Engineer
+**Data Engineer | Distributed Systems | Streaming & Cloud Architecture**
 
-Currently working as an **IT Engineer** in the **IT Operations Team** at **Mirae Asset Life Insurance**. My responsibilities include **data architecture, BI (Business Intelligence), and IT operations** to enhance business decision-making. 
+Currently working as a **Data Engineer in IT Operations** at **Mirae Asset Life Insurance**, building and optimizing enterprise-scale data systems for business intelligence and operational decision-making.
 
-LinkedIn: https://www.linkedin.com/in/%EC%83%81%EC%A4%80-%EC%9C%A0-a29442257/ 
----
+I focus on:
 
-## 💻 Work Experience
+- Designing **end-to-end data pipelines (Batch + Streaming)**
+- Building **distributed systems with Kafka & Spark**
+- Cloud-native architecture on **AWS**
+- Production-grade BI systems for executive stakeholders
+- Data modeling, performance tuning, and reliability engineering
 
-### **Mirae Asset Life Insurance - IT Operations & Data Engineer**
-**Period**: February 2025 – Present  
-**Role**:
-- **Data Architecture & Business Intelligence**:
-  - Implementing efficient **data pipelines** for business operations.
-  - Providing real-time **BI dashboards and reports** for C-level executives.
-  - Optimizing database structures and ensuring **data integrity**.
+📌 LinkedIn  
+https://www.linkedin.com/in/상준-유-a29442257/
 
 ---
 
-### **Cloud Infrastructure & Data Engineer Training**
-**Training by**: [Bespin Global MSP](https://www.bespinglobal.com/)  
-**Course Period**: August 2024 – January 2025  
-**Platform**: [Seoul SeSAC](https://sesac.seoul.kr/course/active/detail.do)
+# 💼 Work Experience
 
-<details>
-  <summary>🟢 Completed Modules</summary>
+## Mirae Asset Life Insurance — IT Operations & Data Engineer  
+**Feb 2025 – Present**
 
-- **Cloud Architecture Design**:
-  - Designing fault-tolerant, high-availability architectures.
-  - Multi-region setups and disaster recovery strategies.
+### Enterprise Data Architecture & BI Engineering
 
-- **Linux & System Basics**:
-  - Server installation and management in Linux environments.
-  - Shell scripting for automation.
+- Design and maintain enterprise **data marts and DW pipelines**
+- Develop and optimize **batch ETL workflows** for insurance and financial datasets
+- Provide executive-level BI dashboards for C-level decision-making
+- Ensure **data integrity, performance optimization, and governance compliance**
+- Troubleshoot and optimize production batch jobs and database workloads
 
-- **Database & Data Analysis**:
-  - Relational databases, SQL queries, and data visualization tools.
+### Core Focus Areas
 
-- **AWS Cloud Services**:
-  - EC2, Lambda, IAM, VPC, S3, and QuickSight.
-</details>
+- Large-scale relational data modeling
+- Analytical query performance tuning
+- Secure data masking and access control
+- Production-grade pipeline reliability
 
 ---
 
-## 🎯 Key Projects: 🚀 Data Engineering & Cloud Infrastructure
+# 🚀 Featured Project: Clinical Search Data Pipeline
 
-### **Fire Emergency Response Dashboard**
-- **Objective**: Built a data-driven dashboard to analyze and visualize fire department response times and optimize resource allocation for improved golden time adherence (7 minutes).
-- **Core Features**:
-  - Batch pipeline for ETL of historical fire department data.
-  - Real-time data ingestion for traffic and accident monitoring using AWS Lambda.
-  - Integrated AWS SNS for real-time notifications on critical incidents.
-- **Technologies Used**:
-  - **ETL Pipeline**: AWS Glue, S3 (Parquet storage), Pandas.
-  - **Real-Time Processing**: AWS Lambda, Apache Flink.
-  - **Visualization**: AWS QuickSight, Grafana.
-- **Achievements**:
-  - Identified regions exceeding response times and suggested resource reallocation.
-  - Enabled real-time monitoring of emergency traffic conditions to enhance response times.
+**Kafka → Spark → S3 → PostgreSQL | Lambda Architecture**
 
-### Repository:
-Explore this project in detail:  
-[Fire Emergency Golden Time Project](https://github.com/SangjunRyu/Cloud9-Final-Project)
+Repository:  
+https://github.com/SangjunRyu/clinical-search-data-pipeline
+
+## Overview
+
+Designed and implemented a **production-style Lambda Architecture pipeline** processing over **5.2M clinical search log events**.
+
+Supports:
+- Batch analytics
+- Real-time streaming dashboards
+- Reprocessing and replay capability
+
+Fully containerized distributed infrastructure using Docker.
 
 ---
 
-## 🎯 Key Project: AWS 3-Tier Architecture
+## Architecture
 
-A comprehensive **3-Tier web service architecture** project built with AWS. This project integrates:
-- **Scalable Cloud Architecture Design**.
-- Performance monitoring using **Prometheus & Grafana**.
-- Automated load testing with **K6**.
-- Separation of static and dynamic resources for optimization.
+### Ingestion Layer
+- Apache Kafka (3-broker cluster)
+- Custom Python producers
+- Session-hash partitioning strategy
 
-### Highlights:
-- **Dynamic and Static Resource Separation**:
-  - Reverse proxy using Apache to route requests efficiently.
-  - Improved backend performance by isolating resource types.
+### Processing Layer
+- Spark Structured Streaming (5-minute micro-batch)
+- Spark Batch ETL jobs
+- Deduplication using `xxhash64(session_id|document_id|event_ts)`
 
-- **Performance Monitoring**:
-  - Real-time dashboards with Grafana.
-  - Logs stored securely in AWS S3 for long-term analysis.
+### Storage Layer
+- Bronze: Raw event archive in AWS S3
+- Silver: Curated & deduplicated datasets
+- Gold: PostgreSQL analytical marts
 
-- **Load Testing Results**:
-  - Simulated 100 virtual users with K6 for scalability assessment.
-  - Validated server capacity and application performance under stress.
-
-### Repository:
-Explore this project in detail:  
-[AWS-3tier-Architecture](https://github.com/SangjunRyu/AWS-3tier-Architecture)
-
+### Orchestration
+- Apache Airflow DAGs
+- DockerOperator & SSHOperator
+- Idempotent daily batch execution
 
 ---
 
-## 🎓 Education
+## Data Marts Implemented
 
-**Bachelor of Engineering in Computer Science & Electronic Engineering**  
-[*Chung-Ang University, Seoul, Korea*](https://www.cau.ac.kr)  
-March 2019 – August 2025 (Expected Graduation)  
-**GPA**: 4.26/4.5
-
----
-
-## 💪 Skills
-
-| **Category**          | **Skills** |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Programming**  | Python, Java, SQL, C++, Rust |
-| **Data Engineering** | Pandas, NumPy, Apache Flink, Spark, ETL Pipelines |
-| **Cloud Computing** | AWS (EC2, S3, Lambda, Glue, QuickSight, CloudWatch), Kubernetes |
-| **BI & Visualization** | AWS QuickSight, Grafana, Tableau |
-| **DevOps & Monitoring** | Prometheus, Grafana, CI/CD, Docker, Terraform |
-| **Database Management** | MySQL, PostgreSQL, DynamoDB |
+- `mart_daily_traffic`
+- `mart_popular_documents`
+- `mart_clinical_trend`
+- `mart_realtime_traffic_minute`
+- `mart_realtime_top_docs_1h`
+- `mart_realtime_anomaly_sessions`
 
 ---
 
-## 🚂 Toy Projects
+## Key Engineering Decisions
 
-### **Eyetracking IoT Project**:
-- **Tools**: Raspberry Pi, OpenCV, Python
-- **Goal**: Developed an IoT-based real-time eye-tracking system for disabled individuals, improving accessibility and user interaction.
-
-### **Airport Management System**:
-- **Tools**: React, FastAPI, MySQL
-- **Goal**: Designed a database and implemented backend functionality to manage flights, reservations, and seat availability.
+- Single consumer group with internal branching logic
+- Exactly-once semantics via checkpoint-based offset control
+- Dynamic partition overwrite strategy for S3
+- Offset-based replay strategy for reprocessing
+- Skew prevention via session-based partitioning
 
 ---
 
-## 🌍 Language Proficiency
+# ☁ Cloud Infrastructure Project: AWS 3-Tier Architecture
 
-- **TOEFL**: 89 (June 2023)
-- **Exchange Program**: University of Turku, Finland (Dec 2023 – June 2024)  
-  - Participated in software development and data engineering projects.
+Repository:  
+https://github.com/SangjunRyu/AWS-3tier-Architecture
+
+Designed a scalable 3-tier architecture including:
+
+- EC2 + Load Balancer
+- Reverse Proxy (Apache)
+- Prometheus & Grafana monitoring
+- K6 load testing
+- S3 log archiving
+
+Validated scalability under concurrent simulated traffic.
 
 ---
 
+# 🚒 Fire Emergency Response Data Platform
+
+Repository:  
+https://github.com/SangjunRyu/Cloud9-Final-Project
+
+- Batch + real-time analytics on emergency response times
+- AWS Glue ETL + Lambda streaming ingestion
+- SNS alert integration
+- Data-driven optimization of 7-minute golden-time target
+
+---
+
+# 🛠 Technical Stack
+
+## Programming
+Python, Java, SQL, C++
+
+## Data Engineering
+Apache Kafka  
+Apache Spark (Batch & Streaming)  
+Apache Airflow  
+ETL Pipeline Design  
+Data Modeling  
+Event-Driven Architecture  
+
+## Cloud & DevOps
+AWS (EC2, S3, Lambda, Glue, IAM, VPC)  
+Docker  
+Kubernetes  
+Prometheus  
+Grafana  
+CI/CD  
+
+## Databases
+PostgreSQL  
+MySQL  
+DynamoDB  
+
+---
+
+# 🎓 Education
+
+Bachelor of Engineering  
+Computer Science & Electronic Engineering  
+Chung-Ang University, Seoul  
+GPA: 4.21 / 4.5
+
+Exchange Program: University of Turku, Finland
+
+---
+
+# 🌍 Career Objective
+
+Seeking opportunities in:
+
+- Global Tech Companies
+- Cloud-native Data Engineering roles
+- Distributed Systems & Streaming Infrastructure teams
+
+I aim to build scalable, fault-tolerant, and intelligent data systems at global scale.

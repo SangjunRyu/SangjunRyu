@@ -41,7 +41,7 @@ https://www.linkedin.com/in/상준-유-a29442257/
 
 # 🚀 Featured Project: Clinical Search Data Pipeline
 
-**Lambda Architecture | Kafka → Spark → S3 (Archive Raw) → PostgreSQL**
+**Lambda Architecture | Kafka → Spark → S3 → PostgreSQL**
 
 Repository:  
 https://github.com/SangjunRyu/clinical-search-data-pipeline
@@ -52,120 +52,49 @@ https://github.com/SangjunRyu/clinical-search-data-pipeline
 
 Designed and implemented an **end-to-end Lambda Architecture data pipeline** processing over **5.2M clinical search log events** (TripClick dataset).
 
-The system supports:
+The system combines:
 
-- Daily batch analytics (T+1 consistency)
-- Near real-time dashboards (5-minute micro-batch)
-- Immutable raw data retention for replay & reprocessing
-- Fully containerized distributed infrastructure (Docker Compose)
+- 📦 **Batch layer** for daily, consistent analytics (T+1)
+- ⚡ **Speed layer** for near real-time dashboards (5-minute micro-batch)
+- ♻️ **Immutable raw storage** for replay and reprocessing
+- 🐳 Fully containerized distributed infrastructure (Docker-based)
 
-This project simulates a production-grade streaming + batch hybrid architecture.
-
----
-
-## Architecture Summary
-
-### Ingestion Layer
-- Dual Web Servers generating event logs
-- Custom Python Kafka Producers
-- 3-broker Kafka Cluster (Confluent 7.5.1)
-- Partitioning strategy to prevent data skew
-
-### Batch Layer (Accuracy & Reprocessing)
-
-Kafka  
-→ `batch_to_archive_raw.py`  
-→ S3 `archive_raw/` (Immutable, Parquet)  
-→ `etl_to_batch_mart.py`  
-→ PostgreSQL Batch Mart (T+1)
-
-Key Characteristics:
-- Immutable raw storage
-- Full reprocessing capability
-- Deduplication using `xxhash64(session_id|document_id|event_ts)`
-- Idempotent batch execution
+This project simulates a production-style hybrid architecture used in real-world data platforms.
 
 ---
 
-### Speed Layer (Near Real-Time Analytics)
+## High-Level Architecture
 
-Kafka  
-→ `streaming_to_realtime_mart.py`  
-→ PostgreSQL Realtime Mart
+### Ingestion
+Web Servers → Kafka (Event Streaming)
 
-Key Characteristics:
-- Spark Structured Streaming (5-minute micro-batch)
-- Checkpoint-based offset management
-- At-least-once processing + dedup strategy
-- Real-time anomaly & trend detection
+### Batch Layer (Accuracy)
+Kafka → S3 (Archive Raw) → Spark ETL → PostgreSQL (Batch Marts)
 
----
+### Speed Layer (Low Latency)
+Kafka → Spark Structured Streaming → PostgreSQL (Realtime Marts)
 
-## Data Layers
+### Serving
+PostgreSQL → Apache Superset Dashboards
 
-| Layer | Storage | Purpose |
-|-------|---------|----------|
-| Archive Raw | AWS S3 (`archive_raw/`) | Immutable raw event storage |
-| Batch Mart | PostgreSQL `mart_*` | Daily analytical marts |
-| Realtime Mart | PostgreSQL `mart_realtime_*` | 5-minute micro-batch analytics |
+### Orchestration
+Apache Airflow (Pipeline Automation & Scheduling)
 
 ---
 
-## Implemented Marts
+## Core Design Principles
 
-### Batch Mart (T+1)
-- `mart_session_analysis`
-- `mart_daily_traffic`
-- `mart_clinical_areas`
-- `mart_popular_documents`
-
-### Realtime Mart (5-minute micro-batch)
-- `mart_realtime_traffic_minute`
-- `mart_realtime_top_docs_1h`
-- `mart_realtime_clinical_trend_24h`
-- `mart_realtime_anomaly_sessions`
-
----
-
-## Orchestration
-
-- Apache Airflow (2.10.5)
-- Modular DAG design
-- DockerOperator & SSHOperator integration
-- Layer-based pipeline separation (Ingestion / Processing / Serving)
-
----
-
-## Key Engineering Principles
-
-- Lambda Architecture (Batch + Speed layer separation)
-- Immutable raw storage for replayability
-- Idempotent batch jobs
-- Deduplication via hash-based composite keys
-- Offset-controlled streaming with checkpointing
-- Simplified serving layer (Direct PostgreSQL load)
+- Separation of **Batch and Speed layers** (Lambda Architecture)
+- Immutable raw data for reliability and replayability
+- Idempotent batch processing
+- Real-time + historical analytics coexistence
+- End-to-end ownership from ingestion to serving layer
 
 ---
 
 ## Tech Stack
 
-- Apache Kafka (7.5.1)
-- Apache Spark (3.4.1)
-- Apache Airflow (2.10.5)
-- PostgreSQL (15)
-- AWS S3
-- Apache Superset (3.1.0)
-- Docker Compose (3.8)
-
----
-
-## What This Project Demonstrates
-
-- Distributed streaming system design
-- Batch + real-time hybrid processing
-- Production-style replay & reprocessing strategy
-- Data modeling for analytical marts
-- Full infrastructure ownership (Kafka → Spark → Orchestration → Serving)
+Kafka • Spark • Airflow • PostgreSQL • AWS S3 • Superset • Docker
 
 ---
 

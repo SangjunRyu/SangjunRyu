@@ -61,7 +61,6 @@ The system combines:
 
 This project simulates a production-style hybrid architecture used in real-world data platforms.
 
----
 
 ## High-Level Architecture
 

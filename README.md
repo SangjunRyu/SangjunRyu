@@ -162,9 +162,6 @@ Computer Science & Electronic Engineering
 Chung-Ang University, Seoul  
 GPA: 4.21 / 4.5
 
-
-## 🌍 Language Proficiency
-
 - **TOEFL**: 89 (June 2023)
 - **Exchange Program**: University of Turku, Finland (Dec 2023 – June 2024)  
   - Participated in software development and data engineering projects.

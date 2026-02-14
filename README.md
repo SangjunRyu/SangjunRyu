@@ -132,6 +132,7 @@ Grafana
 CI/CD  
 
 ## Databases
+Oracle
 PostgreSQL  
 MySQL  
 DynamoDB  

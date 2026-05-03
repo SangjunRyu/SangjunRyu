@@ -13,7 +13,7 @@ I focus on:
 - Data modeling, performance tuning, and reliability engineering
 
 📌 LinkedIn  
-https://www.linkedin.com/in/상준-유-a29442257/
+https://www.linkedin.com/in/sangjun-you-a29442257/
 
 ---
 

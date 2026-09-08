@@ -1,250 +1,126 @@
 # Sangjun You
 
-**Data Engineer | Distributed Systems | Streaming & Cloud Architecture**
+**Data Engineer | Data Platform | Systems & Performance Engineering**
 
-Data Engineer with production experience across two companies — enterprise DW/BI pipelines at a life insurance company, and **Spark/Delta advertising data pipelines** at a performance marketing agency, where I focused on execution-plan-level performance analysis and regression-safe data changes.
+Data Engineer with ~1.5 years of enterprise DW/BI experience (Oracle · Hadoop · DataStage) followed by
+hands-on work on a modern **Databricks / Spark / Delta Lake** platform. I like problems where the fix
+comes from reading the execution plan and the profiler rather than guessing — pipeline performance,
+data layout, and proving a change didn't break anything.
 
-I focus on:
-
-- Designing **end-to-end data pipelines (Batch + Streaming)**
-- Building **distributed systems with Kafka & Spark**
-- **Spark execution-plan analysis and executor-level profiling**
-- Cloud-native architecture on **AWS**
-- Production-grade BI systems for executive stakeholders
-- Data modeling, performance tuning, and reliability engineering
-
-📌 LinkedIn  
-https://www.linkedin.com/in/sangjun-you-a29442257/
+📌 LinkedIn — https://www.linkedin.com/in/sangjun-you-a29442257/
 
 ---
 
-# 💼 Work Experience
+# 💼 Selected Experience
 
-## Echo Marketing — Data Engineer (Contract)  
+## Mirae Asset Life Insurance — Data Engineer, IT Operations
+**Feb 2025 – Jun 2026**
+
+Enterprise DW and analytics operations for insurance and financial datasets.
+
+<!-- ⚠️ 아래 4개 수치(44% / 1주→1일 / 480GB→31GB / 500GB)는 확인 후 확정할 것 -->
+
+- Operated **ETL and data marts across Oracle DW and Hadoop** environments using
+  DataStage, Hive, and Spark
+- Improved scoring pipeline lead time by **44%** through batch partitioning and
+  removal of inefficient library calls
+- Automated a KPI reporting workflow from **~1 week to ~1 day** turnaround
+- Restructured `SQL*Loader` ingestion to cut intermediate storage from **~480GB to ~31GB**,
+  reclaiming **~500GB** of database space
+- Supported **enterprise BI and financial reporting** on Tableau and Cognos for
+  executive-level decision-making
+- Supported **container and GPU deployment / troubleshooting for AI inference workloads
+  on Kubernetes**-based model serving infrastructure
+- Applied data masking and access controls for governance compliance
+
+---
+
+## Echo Marketing — Data Engineer (Contract)
 **Jun 2026 – Sep 2026**
 
-Owned the **gold layer and BI serving layer** of an advertising data platform on Databricks
-(PySpark / Delta Lake / Unity Catalog), serving 20+ advertiser accounts.
-Upstream ingestion through the silver layer was owned by a separate platform cell.
+Developed and maintained **gold-layer pipelines and BI serving workloads** on a multi-account
+advertising data platform (Databricks · PySpark · Delta Lake · Unity Catalog). Ingestion through
+the silver layer was owned by a separate platform cell.
 
-### Production Pipeline Optimization
-
-- Optimized the URL classification stage of a **24.5M-row batch**. Read the generated plan
-  (`explain codegen`) and found that regex predicates (`rlike`) were **not** rewritten into
-  cheap `Contains` operations, unlike `like` — so cost scaled with how often the regex engine ran,
-  not with the number of conditions
-- Measured actual traffic distribution (**71% / 27.5% / 3%**) and **reordered branch conditions by
-  frequency**, then added cheap string pre-checks so regex evaluation short-circuits for most rows
-- Profiled the vectorized-UDF alternative on executors: of **763s** total, **string lowercasing
-  accounted for 25%** — not regex, which **disproved my initial hypothesis**. Kept the native Spark
-  implementation rather than the UDF path
-- Rejected a direct runtime comparison between the two implementations after finding their
-  **IO cache hit ratios differed (2.21% vs 37.59%)**
-- **Verified row-level equivalence before release** — full-set comparison surfaced **1,581
-  misclassified rows introduced by my own new logic**; fixed and confirmed zero difference
-  in both directions. **Shipped to production and running as validated.**
-
-### Query Load Attribution & Serving Performance
-
-- Attributed peak-hour report-refresh contention on a shared SQL warehouse to **three layers**:
-  fixed compute size, schedule clustering on the hour/half-hour, and long session occupancy
-  by large result transfers
-- Broke the load down **per account** instead of in aggregate — surfaced duplicate query issuance
-  by a BI client (**5–9 identical queries per day**, up to **35 concurrent sessions**) and a
-  **12.5x throughput gap** between execution paths of the same procedure
-- Query text was **globally redacted by workspace policy**; built an alternative attribution path
-  by joining lineage system tables on statement ID, attributing **84.3% of SELECTs** in the peak
-  window to specific accounts and tables
-- Applied time-boxed autoscaling → **queued queries 90 → 15**
-- Validated an incremental physical-load pattern (`REPLACE WHERE`) against a full-recompute view,
-  and proved partition pruning actually engages (**17.0s → 3.5s**), which avoided rewriting
-  **31 downstream view branches**
-
-### Regression Safety in Data Changes
-
-- Predicted downstream fan-out **before** a grain change — **291,438 → 6,183,444 rows (21.2x)**,
-  which would have broken a live dashboard — and redesigned the rollout so the downstream view is
-  fixed in the same deployment, with a fixed ordering constraint documented for handover
-- Standardized on **bidirectional `EXCEPT ALL` (zero rows both ways)** to prove row-set identity;
-  sum-only comparison misses regressions where rows split. Validated a **1.71M-row** downstream
-  view as unaffected
-- Separated float accumulation-order artifacts (±0.01 under `round(,2)`, exact under
-  `decimal(30,6)`) from genuine defects, preventing false defect reports
-- Proved a legacy transformation fix lossless under identical input (md5-matched):
-  **17 columns matched on all original rows, zero loss**
-
-### Legacy ETL → Databricks Migration Analysis
-
-- Analyzed an on-premise GUI-based ETL (**45 sequential job steps, 25 transformation scripts,
-  15 ad media, 35 output columns**) and specified the target pipeline with
-  as-is measurement / defect verdict / to-be proposal side by side
-- Root-caused why media rows and conversion rows never joined in the final output, and ran a
-  **merge-key simulation (current 0% → 97.2% when two derived columns are excluded)** to justify
-  the target key design
-- Found latent defects that must not be carried over — including a branch filter whose match string
-  had **never existed in the source** (0 hits across 2023 and 2026 samples) and a year-prefix filter
-  that silently dropped a full year of records (**derived-column fill rate 52% → 90% after fix**)
-- *Scope delivered: requirements analysis and defect verdicts. Code migration was scheduled past
-  my contract end and handed over.*
-
-### Tooling & Automation
-
-- Built a **network profiler from scratch** (Python + Chrome DevTools Protocol) after the standard
-  Node-based tooling was blocked by endpoint security — endpoint p50/p95, automatic
-  polling-interval detection, per-second burst fan-out detection
-- Automated recurring pipeline work with 4 agent skills and a CLI toolchain, and **encoded safety
-  boundaries in a rulebook rather than convention** — writes restricted to dev catalogs, human
-  approval required for production runs / releases / backfills, PII columns off-limits
-
-### Core Focus Areas
-
-- Spark execution-plan analysis and executor-level profiling
-- Delta Lake data layout (partitioning, liquid clustering, file compaction, transaction log)
-- Regression-safe data changes via row-set equivalence proofs
-- Multi-tenant query load attribution under restricted observability
+- Optimized the URL classification stage of a **24.5M-row Spark batch** using `explain codegen`
+  and measured traffic distribution to reorder branch conditions and short-circuit regex
+  evaluation — including **executor-level UDF profiling that disproved my initial
+  regex-bottleneck hypothesis**. Verified row-set equivalence before release;
+  **shipped to production**
+- Attributed peak-hour query load on a shared SQL warehouse to account and table level using
+  **Databricks system / lineage tables** when query text was globally redacted by policy
+  (**84.3%** of SELECTs attributed), then applied time-boxed autoscaling —
+  **queued queries 90 → 15**
+- Managed regression risk in data changes — predicted downstream fan-out **before** a grain change
+  (**21.2x** row inflation that would have broken a live dashboard) and standardized on
+  **bidirectional row-set equivalence checks** instead of aggregate comparison
+- Analyzed a legacy on-premise ETL (**45 sequential steps · 15 ad media · 35 output columns**)
+  for Databricks migration — measured AS-IS behavior on real data, issued defect verdicts, and
+  designed the target data model and merge keys via **key-combination simulation (0% → 97.2%)**
+- Built a **network profiling utility** (Python + Chrome DevTools Protocol) after Node-based
+  tooling was blocked by endpoint security — endpoint p50/p95, polling-interval detection,
+  burst fan-out detection
 
 ---
 
-## Mirae Asset Life Insurance — IT Operations & Data Engineer  
-**Feb 2025 – June 2026** <!-- 종료월 확인 후 수정 -->
+# 🚀 Featured Engineering Projects
 
-### Enterprise Data Architecture & BI Engineering
+## Clinical Search Data Pipeline — Lambda Architecture
 
-- Design and maintain enterprise **data marts and DW pipelines**
-- Develop and optimize **batch ETL workflows** for insurance and financial datasets
-- Provide executive-level BI dashboards for C-level decision-making
-- Ensure **data integrity, performance optimization, and governance compliance**
-- Troubleshoot and optimize production batch jobs and database workloads
-- Operated **LLM serving environments on Kubernetes-based model serving infrastructure**
+**Kafka → Spark → S3 → PostgreSQL → Superset · orchestrated with Airflow**
 
-### Core Focus Areas
-
-- Large-scale relational data modeling
-- Analytical query performance tuning
-- Secure data masking and access control
-- Production-grade pipeline reliability
-
----
-
-# 🚀 Featured Project: Clinical Search Data Pipeline
-
-**Lambda Architecture | Kafka → Spark → S3 → PostgreSQL**
-
-Repository:  
 https://github.com/SangjunRyu/clinical-search-data-pipeline
 
----
+End-to-end Lambda Architecture pipeline processing **5.2M+ clinical search log events**
+(TripClick dataset), fully containerized with Docker.
 
-## Overview
+- **Batch layer** — Kafka → S3 (immutable raw archive) → Spark ETL → PostgreSQL marts (T+1)
+- **Speed layer** — Kafka → Spark Structured Streaming → PostgreSQL realtime marts (5-min micro-batch)
+- **Replay** — raw archive retained for reprocessing
+- **Serving** — Apache Superset dashboards
 
-Designed and implemented an **end-to-end Lambda Architecture data pipeline** processing over **5.2M clinical search log events** (TripClick dataset).
+## AWS 3-Tier Architecture
 
-The system combines:
-
-- 📦 **Batch layer** for daily, consistent analytics (T+1)
-- ⚡ **Speed layer** for near real-time dashboards (5-minute micro-batch)
-- ♻️ **Immutable raw storage** for replay and reprocessing
-- 🐳 Fully containerized distributed infrastructure (Docker-based)
-
-This project simulates a production-style hybrid architecture used in real-world data platforms.
-
-
-## High-Level Architecture
-
-### Ingestion
-Web Servers → Kafka (Event Streaming)
-
-### Batch Layer (Accuracy)
-Kafka → S3 (Archive Raw) → Spark ETL → PostgreSQL (Batch Marts)
-
-### Speed Layer (Low Latency)
-Kafka → Spark Structured Streaming → PostgreSQL (Realtime Marts)
-
-### Serving
-PostgreSQL → Apache Superset Dashboards
-
-### Orchestration
-Apache Airflow (Pipeline Automation & Scheduling)
-
----
-
-# ☁ Cloud Infrastructure Project: AWS 3-Tier Architecture
-
-Repository:  
 https://github.com/SangjunRyu/AWS-3tier-Architecture
 
-Designed a scalable 3-tier architecture including:
+Scalable 3-tier design — EC2 + load balancer, Apache reverse proxy, Prometheus/Grafana monitoring,
+S3 log archiving. Validated under concurrent simulated traffic with K6.
 
-- EC2 + Load Balancer
-- Reverse Proxy (Apache)
-- Prometheus & Grafana monitoring
-- K6 load testing
-- S3 log archiving
+## Fire Emergency Response Data Platform
 
-Validated scalability under concurrent simulated traffic.
-
----
-
-# 🚒 Fire Emergency Response Data Platform
-
-Repository:  
 https://github.com/SangjunRyu/Cloud9-Final-Project
 
-- Batch + real-time analytics on emergency response times
-- AWS Glue ETL + Lambda streaming ingestion
-- SNS alert integration
-- Data-driven optimization of 7-minute golden-time target
+Batch and real-time analytics on emergency response times — AWS Glue ETL, Lambda streaming
+ingestion, SNS alerting. Analysis targeted the 7-minute golden-time objective.
 
 ---
 
 # 🛠 Technical Stack
 
-## Programming
-Python, Java, SQL, C++
+**Languages** — Python, Java, SQL, C++
 
-## Data Engineering
-Apache Kafka  
-Apache Spark (Batch & Streaming)  
-Databricks (PySpark, Delta Lake, Unity Catalog)  
-Apache Airflow  
-ETL Pipeline Design  
-Data Modeling  
-Event-Driven Architecture  
+**Data** — Spark (batch & streaming), Databricks (PySpark · Delta Lake · Unity Catalog), Kafka,
+Airflow, DataStage, Hive, ETL & data modeling
 
-## Performance & Observability
-Spark execution plans (`explain codegen`) & executor-level profiling  
-Delta Lake layout tuning (partitioning, liquid clustering, compaction)  
-Query load attribution via system/lineage tables  
-Prometheus, Grafana  
+**Performance & Observability** — Spark execution plans (`explain codegen`), executor-level
+profiling, Delta layout tuning (partitioning · clustering · compaction), query load attribution
+via system/lineage tables, Prometheus, Grafana
 
-## Cloud & DevOps
-AWS (EC2, S3, Lambda, Glue, IAM, VPC)  
-Docker  
-Kubernetes  
-CI/CD  
+**Cloud & DevOps** — AWS (EC2, S3, Lambda, Glue, IAM, VPC), Docker, Kubernetes, CI/CD
 
-## Databases
-Oracle  
-PostgreSQL  
-MySQL  
-DynamoDB  
+**Databases** — Oracle, PostgreSQL, MySQL, DynamoDB
 
-## BI
-Apache Superset  
-Tableau  
+**BI** — Tableau, Cognos, Superset
 
 ---
 
 # 🎓 Education
 
-Bachelor of Engineering  
-Computer Science & Electronic Engineering  
-Chung-Ang University, Seoul  
-GPA: 4.21 / 4.5
+**Bachelor of Engineering**, Computer Science & Electronic Engineering
+Chung-Ang University, Seoul — GPA 4.21 / 4.5
 
-- **TOEFL**: 89 (June 2023)
-- **Exchange Program**: University of Turku, Finland (Dec 2023 – June 2024)  
-  - Participated in software development.
+- Exchange program — University of Turku, Finland (Dec 2023 – Jun 2024)
+- TOEFL 89 (Jun 2023)
 
 ---
 

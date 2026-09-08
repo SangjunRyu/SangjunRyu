@@ -18,7 +18,6 @@ data layout, and proving a change didn't break anything.
 
 Enterprise DW and analytics operations for insurance and financial datasets.
 
-
 - Operated **ETL and data marts across Oracle DW and Hadoop** environments using
   DataStage, Hive, and Spark
 - Improved scoring pipeline lead time by **44%** through batch partitioning and
@@ -37,9 +36,10 @@ Enterprise DW and analytics operations for insurance and financial datasets.
 ## Echo Marketing — Data Engineer (Contract)
 **Jun 2026 – Sep 2026**
 
-Developed and maintained **gold-layer pipelines and BI serving workloads** on a multi-account
-advertising data platform (Databricks · PySpark · Delta Lake · Unity Catalog). Ingestion through
-the silver layer was owned by a separate platform cell.
+Worked across the **analytics-facing layer** of a multi-account advertising data platform
+(Databricks · PySpark · Delta Lake · Unity Catalog) — gold datasets, ODBC report views, and
+Tableau dashboards consumed by marketing teams — plus the performance and reliability engineering
+underneath them. Ingestion through the silver layer was owned by a separate platform cell.
 
 - Optimized the URL classification stage of a **24.5M-row Spark batch** using `explain codegen`
   and measured traffic distribution to reorder branch conditions and short-circuit regex
@@ -50,12 +50,12 @@ the silver layer was owned by a separate platform cell.
   **Databricks system / lineage tables** when query text was globally redacted by policy
   (**84.3%** of SELECTs attributed), then applied time-boxed autoscaling —
   **queued queries 90 → 15**
-- Managed regression risk in data changes — predicted downstream fan-out **before** a grain change
-  (**21.2x** row inflation that would have broken a live dashboard) and standardized on
-  **bidirectional row-set equivalence checks** instead of aggregate comparison
 - Analyzed a legacy on-premise ETL (**45 sequential steps · 15 ad media · 35 output columns**)
   for Databricks migration — measured AS-IS behavior on real data, issued defect verdicts, and
   designed the target data model and merge keys via **key-combination simulation (0% → 97.2%)**
+- Translated campaign-analytics requirements from marketing teams into **dataset specs** —
+  metric definitions, grain, key uniqueness, partitioning, and how far back data could be
+  restated — and delivered them as gold datasets, report views, and dashboards
 
 ---
 
@@ -120,13 +120,5 @@ Chung-Ang University, Seoul — GPA 4.21 / 4.5
 
 ---
 
-# 🌍 Career Objective
-
-Seeking opportunities in:
-
-- Global Tech Companies
-- Cloud-native Data Engineering roles
-- Distributed Systems & Streaming Infrastructure teams
-- ML / AI Infrastructure (inference optimization, model serving, GPU workloads)
-
-I aim to build scalable, fault-tolerant, and intelligent data systems at global scale.
+Currently focused on data platform and ML/AI infrastructure — inference optimization,
+model serving, and GPU workloads.

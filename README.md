@@ -18,7 +18,6 @@ data layout, and proving a change didn't break anything.
 
 Enterprise DW and analytics operations for insurance and financial datasets.
 
-<!-- ⚠️ 아래 4개 수치(44% / 1주→1일 / 480GB→31GB / 500GB)는 확인 후 확정할 것 -->
 
 - Operated **ETL and data marts across Oracle DW and Hadoop** environments using
   DataStage, Hive, and Spark
@@ -57,9 +56,6 @@ the silver layer was owned by a separate platform cell.
 - Analyzed a legacy on-premise ETL (**45 sequential steps · 15 ad media · 35 output columns**)
   for Databricks migration — measured AS-IS behavior on real data, issued defect verdicts, and
   designed the target data model and merge keys via **key-combination simulation (0% → 97.2%)**
-- Built a **network profiling utility** (Python + Chrome DevTools Protocol) after Node-based
-  tooling was blocked by endpoint security — endpoint p50/p95, polling-interval detection,
-  burst fan-out detection
 
 ---
 

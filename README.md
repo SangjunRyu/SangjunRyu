@@ -136,7 +136,7 @@ Chung-Ang University, Seoul — GPA 4.21 / 4.5
 
 ---
 
-🌍 Career Objective
+# 🌍 Career Objective
 Seeking opportunities in:
 
 Global Tech Companies

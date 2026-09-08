@@ -136,5 +136,11 @@ Chung-Ang University, Seoul — GPA 4.21 / 4.5
 
 ---
 
-Currently focused on data platform and ML/AI infrastructure — inference optimization,
-model serving, and GPU workloads.
+🌍 Career Objective
+Seeking opportunities in:
+
+Global Tech Companies
+Cloud-native Data Engineering roles
+Distributed Systems & Streaming Infrastructure teams
+ML / AI Infrastructure (inference optimization, model serving, GPU workloads)
+I aim to build scalable, fault-tolerant, and intelligent data systems at global scale.

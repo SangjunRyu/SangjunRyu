@@ -16,7 +16,8 @@ data layout, and proving a change didn't break anything.
 ## Mirae Asset Life Insurance — Data Engineer, IT Operations
 **Feb 2025 – Jun 2026**
 
-Enterprise DW and analytics operations for insurance and financial datasets.
+Large-scale ETL operations and server/solution administration on an **Oracle Exadata** DW,
+plus enterprise BI for insurance and financial datasets.
 
 - Operated **ETL and data marts across Oracle DW and Hadoop** environments using
   DataStage, Hive, and Spark
@@ -41,18 +42,32 @@ Worked across the **analytics-facing layer** of a multi-account advertising data
 Tableau dashboards consumed by marketing teams — plus the performance and reliability engineering
 underneath them. Ingestion through the silver layer was owned by a separate platform cell.
 
+- Root-caused a **recurring daily load failure** the team had been absorbing with manual re-runs.
+  `EXPLAIN ANALYZE` showed a **function-wrapped index column**
+  (`DATE_FORMAT(col, '%Y-%m-%d') BETWEEN ? AND ?`) invalidating the index and forcing a
+  **3.38M-row table scan**. Replaced it with a range predicate — **78.1s → 1.57s**, index range
+  scan over 21,902 rows, **no index added and no schema change**. Shipped to production
 - Optimized the URL classification stage of a **24.5M-row Spark batch** using `explain codegen`
   and measured traffic distribution to reorder branch conditions and short-circuit regex
   evaluation — including **executor-level UDF profiling that disproved my initial
   regex-bottleneck hypothesis**. Verified row-set equivalence before release;
   **shipped to production**
-- Attributed peak-hour query load on a shared SQL warehouse to account and table level using
-  **Databricks system / lineage tables** when query text was globally redacted by policy
+- **Found a recurring load pattern in Aurora MySQL before any ticket was raised** — the top SQL by
+  average active sessions (a live-rendering BI view) examined **4.66M rows per call to return 98K**.
+  `EXPLAIN ANALYZE` showed the same table scanned twice (**9.12M rows ≈ 3.54GB per call**).
+  Designed a composite-index / range-scan / pre-narrowed-aggregation fix with an estimated
+  **97.9% scan reduction**, and defined the verification metrics up front (latency, rows examined,
+  active sessions, read IOPS, buffer cache hit ratio). *Diagnosis and design delivered; not
+  deployed before contract end*
+- Attributed peak-hour query load on a shared **Databricks SQL warehouse** to account and table
+  level using **system / lineage tables** when query text was globally redacted by policy
   (**84.3%** of SELECTs attributed), then applied time-boxed autoscaling —
-  **queued queries 90 → 15**
-- Analyzed a legacy on-premise ETL (**45 sequential steps · 15 ad media · 35 output columns**)
-  for Databricks migration — measured AS-IS behavior on real data, issued defect verdicts, and
-  designed the target data model and merge keys via **key-combination simulation (0% → 97.2%)**
+  **queued queries 90 → 15**.
+<!-- 잡 규모: 아카이브 실측 45단계·ktr 25본·매체 15종 vs PT 자료 47단계·ktr 20+·매체 14종. 대조 후 확정 -->
+- Analyzed a legacy on-premise ETL chain (**45+ sequential steps · 14 ad media · 35 output
+  columns**) for Databricks migration — measured AS-IS behavior on real data, issued defect
+  verdicts, and designed the target data model and merge keys via
+  **key-combination simulation (0% → 97.2%)**
 - Translated campaign-analytics requirements from marketing teams into **dataset specs** —
   metric definitions, grain, key uniqueness, partitioning, and how far back data could be
   restated — and delivered them as gold datasets, report views, and dashboards
@@ -98,9 +113,10 @@ ingestion, SNS alerting. Analysis targeted the 7-minute golden-time objective.
 **Data** — Spark (batch & streaming), Databricks (PySpark · Delta Lake · Unity Catalog), Kafka,
 Airflow, DataStage, Hive, ETL & data modeling
 
-**Performance & Observability** — Spark execution plans (`explain codegen`), executor-level
-profiling, Delta layout tuning (partitioning · clustering · compaction), query load attribution
-via system/lineage tables, Prometheus, Grafana
+**Performance & Observability** — SQL execution plans (`EXPLAIN ANALYZE`, index design,
+SARGability), Spark plans (`explain codegen`) & executor-level profiling, Delta layout tuning
+(partitioning · clustering · compaction), query load attribution via system/lineage tables,
+AWS CloudWatch · RDS/Aurora Database Insights, Prometheus, Grafana
 
 **Cloud & DevOps** — AWS (EC2, S3, Lambda, Glue, IAM, VPC), Docker, Kubernetes, CI/CD
 
@@ -117,6 +133,8 @@ Chung-Ang University, Seoul — GPA 4.21 / 4.5
 
 - Exchange program — University of Turku, Finland (Dec 2023 – Jun 2024)
 - TOEFL 89 (Jun 2023)
+
+**Certifications** — AWS Certified Solutions Architect (Feb 2025)
 
 ---
 

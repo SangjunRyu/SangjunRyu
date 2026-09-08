@@ -57,13 +57,11 @@ underneath them. Ingestion through the silver layer was owned by a separate plat
   `EXPLAIN ANALYZE` showed the same table scanned twice (**9.12M rows ≈ 3.54GB per call**).
   Designed a composite-index / range-scan / pre-narrowed-aggregation fix with an estimated
   **97.9% scan reduction**, and defined the verification metrics up front (latency, rows examined,
-  active sessions, read IOPS, buffer cache hit ratio). *Diagnosis and design delivered; not
-  deployed before contract end*
+  active sessions, read IOPS, buffer cache hit ratio). 
 - Attributed peak-hour query load on a shared **Databricks SQL warehouse** to account and table
   level using **system / lineage tables** when query text was globally redacted by policy
   (**84.3%** of SELECTs attributed), then applied time-boxed autoscaling —
   **queued queries 90 → 15**.
-<!-- 잡 규모: 아카이브 실측 45단계·ktr 25본·매체 15종 vs PT 자료 47단계·ktr 20+·매체 14종. 대조 후 확정 -->
 - Analyzed a legacy on-premise ETL chain (**45+ sequential steps · 14 ad media · 35 output
   columns**) for Databricks migration — measured AS-IS behavior on real data, issued defect
   verdicts, and designed the target data model and merge keys via
